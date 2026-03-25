@@ -1,0 +1,12 @@
+services:
+  organigramm:
+    build: .
+    ports:
+      - "3001:3001"
+    volumes:
+      - ./data:/app/data
+    environment:
+      - EDITOR_PIN=${EDITOR_PIN:-1234}
+      - PORT=3001
+      - NODE_ENV=production
+    restart: unless-stopped

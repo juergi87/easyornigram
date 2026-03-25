@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 240 10% 4%;
+    --card: 0 0% 100%;
+    --card-foreground: 240 10% 4%;
+    --primary: 221 83% 53%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 240 5% 96%;
+    --secondary-foreground: 240 6% 10%;
+    --muted: 240 5% 96%;
+    --muted-foreground: 240 4% 46%;
+    --accent: 240 5% 93%;
+    --accent-foreground: 240 6% 10%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 240 6% 90%;
+    --input: 240 6% 90%;
+    --ring: 221 83% 53%;
+    --radius: 0.5rem;
+  }
+  .dark {
+    --background: 240 10% 4%;
+    --foreground: 0 0% 97%;
+    --card: 240 8% 7%;
+    --card-foreground: 0 0% 97%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 240 6% 10%;
+    --secondary: 240 4% 14%;
+    --secondary-foreground: 0 0% 97%;
+    --muted: 240 4% 14%;
+    --muted-foreground: 240 5% 58%;
+    --accent: 240 4% 14%;
+    --accent-foreground: 0 0% 97%;
+    --destructive: 0 63% 31%;
+    --destructive-foreground: 0 0% 97%;
+    --border: 240 4% 14%;
+    --input: 240 4% 14%;
+    --ring: 217 91% 60%;
+  }
+}
+
+@layer base {
+  * { @apply border-border; }
+  body { @apply bg-background text-foreground; }
+}
+
+/* React Flow overrides */
+.react-flow__node { cursor: default; }
+.react-flow__handle {
+  width: 8px !important;
+  height: 8px !important;
+  border-radius: 50% !important;
+  border: 2px solid hsl(var(--border)) !important;
+  background: hsl(var(--card)) !important;
+  transition: background 0.15s, border-color 0.15s;
+}
+.react-flow__handle:hover {
+  background: hsl(var(--primary)) !important;
+  border-color: hsl(var(--primary)) !important;
+}
+.react-flow__edge-path {
+  stroke-width: 1.5;
+  stroke: hsl(var(--muted-foreground));
+}
+.react-flow__edge.selected .react-flow__edge-path,
+.react-flow__edge:hover .react-flow__edge-path {
+  stroke: hsl(var(--primary));
+}
+.react-flow__controls {
+  box-shadow: none !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
+  overflow: hidden;
+}
+.react-flow__controls button {
+  background: hsl(var(--card)) !important;
+  border-color: hsl(var(--border)) !important;
+  color: hsl(var(--muted-foreground)) !important;
+  border-bottom: 1px solid hsl(var(--border)) !important;
+  transition: background 0.15s, color 0.15s;
+}
+.react-flow__controls button:hover {
+  background: hsl(var(--accent)) !important;
+  color: hsl(var(--foreground)) !important;
+}
+.react-flow__minimap {
+  background: hsl(var(--card)) !important;
+  border: 1px solid hsl(var(--border)) !important;
+  border-radius: var(--radius) !important;
+}
+.react-flow__background pattern circle {
+  fill: hsl(var(--border));
+}
+.react-flow__attribution { display: none; }
