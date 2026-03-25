@@ -39,8 +39,8 @@ A lightweight, local-first org chart web application — built for self-hosted d
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/your-username/organigramm.git
-cd organigramm
+git clone https://github.com/juergi87/easyornigram
+cd easyornigram
 ```
 
 ### 2. Create an environment file
