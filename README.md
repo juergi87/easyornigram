@@ -142,9 +142,3 @@ npm start
 - The editor PIN is stored only in the server environment and never sent to the browser.
 - Auth state is managed via HTTP-only session cookies.
 - Unauthenticated users can access the viewer but cannot create or modify org charts.
-
----
-
-## License
-
-MIT
